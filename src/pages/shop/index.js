@@ -4,10 +4,12 @@ import { cars } from "../../../lib/cars";
 import InputField from "@/components/InputField/InputField";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import useDebounceState from "@/hooks/useDebounceState";
 
 export default function shop() {
   const [inputValue, setInputValue] = useState("");
   const [filteredCarList, setFilteredCarList] = useState(cars);
+  const debouncedInputValue = useDebounceState(inputValue, 250);
 
   const router = useRouter();
 
@@ -17,7 +19,7 @@ export default function shop() {
     } else {
       setFilteredCarList(cars.filter((car) => car.title.includes(inputValue)));
     }
-  }, [inputValue]);
+  }, [debouncedInputValue]);
 
   return (
     <div className={styles.container}>
@@ -26,6 +28,7 @@ export default function shop() {
         type="text"
         onChangeHandler={(e) => setInputValue(e.target.value)}
         value={inputValue}
+        placeHolderValue="search..."
         className={styles.input}
       />
       <div className={styles.cars}>

@@ -5,12 +5,14 @@ export default function InputField({
   value,
   onChangeHandler,
   className,
+  placeHolderValue,
 }) {
   return (
     <input
       type={type}
       value={value}
       onChange={onChangeHandler}
+      placeholder={placeHolderValue}
       className={style.input + " " + className}
     />
   );
