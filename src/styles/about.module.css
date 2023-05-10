@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.sectionContainer {
+  width: 40%;
+  margin: 2rem 0 0 0;
+}
+
+.section {
+  padding: 2rem 0 2rem 0;
+}
+
+.title {
+  font-family: "Dancing Script", cursive;
+  background-image: url(../../public/cars/MainCar.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 40%;
+  height: 15rem;
+  border-radius: 8px;
+  font-size: 7rem;
+  text-align: center;
+  padding-top: 3rem;
+  justify-self: center;
+  color: #000; /* Fallback for older browsers */
+  color: rgba(0, 0, 0, 0.1);
+  -webkit-text-stroke: 2px white;
+}
+.link {
+  margin: 1rem 0 3rem 0;
+}

@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 15rem 5rem 10rem;
+  gap: 3rem;
+}
+.title {
+  margin-bottom: 20%;
+}
+.innerContainer {
+  flex-direction: column;
+}
+.description {
+  font-size: 18px;
+  padding: 1rem;
+}
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0 0 0;
+}
+.img {
+  border-radius: 6px;
+}

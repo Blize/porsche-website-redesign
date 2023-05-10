@@ -1,0 +1,15 @@
+.input {
+  padding: 0.5rem;
+  border: 0.5px solid black;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.input:hover {
+  border: gray 0.5px solid;
+}
+
+.input:focus {
+  outline: none;
+  border: #086adb 2.5px solid;
+}
